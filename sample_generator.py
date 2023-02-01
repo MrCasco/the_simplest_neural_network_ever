@@ -20,14 +20,14 @@ Meanings:
 """
 
 options = [
-    {'input':[1.0, 1.0, 1.0, 1.0] ,'answer':0.0},
+    {'input':[1.0, 1.0, 1.0, 1.0] ,'answer':15.0},
     {'input':[0.0, 0.0, 0.0, 0.0] ,'answer':0.0},
-    {'input':[1.0, 0.0, 0.0, 1.0] ,'answer':1.0},
-    {'input':[0.0, 1.0, 1.0, 0.0] ,'answer':1.0},
-    {'input':[1.0, 1.0, 0.0, 0.0] ,'answer':2.0},
-    {'input':[0.0, 0.0, 1.0, 1.0] ,'answer':2.0},
-    {'input':[0.0, 1.0, 0.0, 1.0] ,'answer':3.0},
-    {'input':[1.0, 0.0, 1.0, 0.0] ,'answer':3.0},
+    {'input':[1.0, 0.0, 0.0, 1.0] ,'answer':9.0},
+    {'input':[0.0, 1.0, 1.0, 0.0] ,'answer':6.0},
+    {'input':[1.0, 1.0, 0.0, 0.0] ,'answer':12.0},
+    {'input':[0.0, 0.0, 1.0, 1.0] ,'answer':3.0},
+    {'input':[0.0, 1.0, 0.0, 1.0] ,'answer':5.0},
+    {'input':[1.0, 0.0, 1.0, 0.0] ,'answer':10.0},
 ]
 
 def generate_samples():
@@ -38,7 +38,7 @@ def generate_samples():
     return res
 
 def test(samples):
-    count = {key: 0 for key in [0.0, 1.0, 2.0, 3.0]}
+    count = {key: 0 for key in [0.0, 3.0, 5.0, 6.0, 9.0, 10.0, 12.0, 15.0]}
     for sample in samples:
         key = sample['answer']
         count[key] += 1
